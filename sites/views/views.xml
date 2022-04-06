@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.ui.view" id="sites_sites_view_tree">
+		<field name="name">Sites tree View</field>
+		<field name="model">sites.sites</field>
+		<field name="priority" eval="16"/>
+		<field name="arch" type="xml">
+			<tree string="Sites Liste">
+				<field name="name"/>
+				<field name="type"/>
+				<field name="adresse"/>
+				<field name="commune"/>
+				<field name="num_dept"/>
+				<field name="code_postal"/>
+				<field name="long"/>
+				<field name="lat"/>
+				<field name="alt_ngf"/>
+				<field name="type_relais" options="{'no_create': True,'no_create_edit': True}"/>
+				<field name="type_chargeur" options="{'no_create': True,'no_create_edit': True}"/>
+				<field name="type_batterie" options="{'no_create': True,'no_create_edit': True}"/>
+				<field name="type_cable" options="{'no_create': True,'no_create_edit': True}"/>
+				<field name="type_ant_40" options="{'no_create': True,'no_create_edit': True}"/>
+				<field name="haut_ant_40"/>
+				<field name="type_ant_FH" options="{'no_create': True,'no_create_edit': True}"/>
+				<field name="haut_ant_FH"/>
+				<field name="type_support" options="{'no_create': True,'no_create_edit': True}"/>
+			</tree>
+		</field>
+	</record>
+
+<record model="ir.ui.view" id="sites_sites_view_form">
+		<field name="name">sites.sites.view.form</field>
+		<field name="model">sites.sites</field>
+		<field name="arch" type="xml">
+			<form string="Sites">
+				<sheet>
+				<h1>
+					<field name="name" placeholder="Nom du sites"/>
+				</h1>
+				<notebook>
+					<page string="Description">
+						<group>
+							<field name="type"/>
+							<field name="adresse"/>
+							<field name="commune"/>
+							<field name="num_dept"/>
+							<field name="code_postal"/>
+							<field name="long"/>
+							<field name="lat"/>
+							<field name="alt_ngf"/>
+						</group>
+					</page>
+					<page string="Relais">
+						<group>
+						<field name="type_relais" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="type_chargeur" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="type_batterie" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="type_cable" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="type_ant_40" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="haut_ant_40"/>
+						<field name="type_ant_FH" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="haut_ant_FH"/>
+						<field name="type_support" options="{'no_create': True,'no_create_edit': True}"/>
+					</group>
+				</page>
+				</notebook>
+			</sheet>
+			</form>
+		</field>
+	</record>
+<record model="ir.ui.view" id="antenne_sites_view_tree">
+		<field name="name">Antenne tree View</field>
+		<field name="model">antenne.sites</field>
+		<field name="priority" eval="17"/>
+		<field name="arch" type="xml">
+			<tree string="Antenne Liste">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+
+<record model="ir.ui.view" id="antenne_sites_view_form">
+		<field name="name">antenne.sites.view.form</field>
+		<field name="model">antenne.sites</field>
+		<field name="arch" type="xml">
+			<form string="Antenne">
+				<sheet>
+				<h1>
+					<field name="name" placeholder="Nom antenne"/>
+				</h1>
+
+			</sheet>
+			</form>
+		</field>
+	</record>
+	<record model="ir.ui.view" id="batterie_sites_view_tree">
+			<field name="name">Batterie tree View</field>
+			<field name="model">batterie.sites</field>
+			<field name="priority" eval="17"/>
+			<field name="arch" type="xml">
+				<tree string="Batterie Liste">
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+	<record model="ir.ui.view" id="batterie_sites_view_form">
+			<field name="name">batterie.sites.view.form</field>
+			<field name="model">batterie.sites</field>
+			<field name="arch" type="xml">
+				<form string="Batterie">
+					<sheet>
+					<h1>
+						<field name="name" placeholder="Nom batterie"/>
+					</h1>
+
+				</sheet>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="cable_sites_view_tree">
+				<field name="name">Cable tree View</field>
+				<field name="model">cable.sites</field>
+				<field name="priority" eval="17"/>
+				<field name="arch" type="xml">
+					<tree string="Cable Liste">
+						<field name="name"/>
+					</tree>
+				</field>
+			</record>
+
+		<record model="ir.ui.view" id="cable_sites_view_form">
+				<field name="name">cable.sites.view.form</field>
+				<field name="model">cable.sites</field>
+				<field name="arch" type="xml">
+					<form string="Cable">
+						<sheet>
+						<h1>
+							<field name="name" placeholder="Nom cable"/>
+						</h1>
+
+					</sheet>
+					</form>
+				</field>
+			</record>
+			<record model="ir.ui.view" id="chargeur_sites_view_tree">
+					<field name="name">Chargeur tree View</field>
+					<field name="model">chargeur.sites</field>
+					<field name="priority" eval="17"/>
+					<field name="arch" type="xml">
+						<tree string="Chargeur Liste">
+							<field name="name"/>
+						</tree>
+					</field>
+				</record>
+
+			<record model="ir.ui.view" id="chargeur_sites_view_form">
+					<field name="name">chargeur.sites.view.form</field>
+					<field name="model">chargeur.sites</field>
+					<field name="arch" type="xml">
+						<form string="Chargeur">
+							<sheet>
+							<h1>
+								<field name="name" placeholder="Nom chargeur"/>
+							</h1>
+
+						</sheet>
+						</form>
+					</field>
+				</record>
+				<record model="ir.ui.view" id="proprietaire_sites_view_tree">
+						<field name="name">Proprietaire tree View</field>
+						<field name="model">proprietaire.sites</field>
+						<field name="priority" eval="17"/>
+						<field name="arch" type="xml">
+							<tree string="Proprietaire Liste">
+								<field name="name"/>
+							</tree>
+						</field>
+					</record>
+
+				<record model="ir.ui.view" id="proprietaire_sites_view_form">
+						<field name="name">proprietaire.sites.view.form</field>
+						<field name="model">proprietaire.sites</field>
+						<field name="arch" type="xml">
+							<form string="Proprietaire">
+								<sheet>
+								<h1>
+									<field name="name" placeholder="Nom proprietaire"/>
+								</h1>
+
+							</sheet>
+							</form>
+						</field>
+					</record>
+					<record model="ir.ui.view" id="relais_sites_view_tree">
+							<field name="name">Relais tree View</field>
+							<field name="model">relais.sites</field>
+							<field name="priority" eval="17"/>
+							<field name="arch" type="xml">
+								<tree string="Relais Liste">
+									<field name="name"/>
+								</tree>
+							</field>
+						</record>
+
+					<record model="ir.ui.view" id="relais_sites_view_form">
+							<field name="name">relais.sites.view.form</field>
+							<field name="model">relais.sites</field>
+							<field name="arch" type="xml">
+								<form string="Relais">
+									<sheet>
+									<h1>
+										<field name="name" placeholder="Nom relais"/>
+									</h1>
+
+								</sheet>
+								</form>
+							</field>
+						</record>
+						<record model="ir.ui.view" id="support_sites_view_tree">
+								<field name="name">Support tree View</field>
+								<field name="model">support.sites</field>
+								<field name="priority" eval="17"/>
+								<field name="arch" type="xml">
+									<tree string="Support Liste">
+										<field name="name"/>
+									</tree>
+								</field>
+							</record>
+
+						<record model="ir.ui.view" id="support_sites_view_form">
+								<field name="name">support.sites.view.form</field>
+								<field name="model">support.sites</field>
+								<field name="arch" type="xml">
+									<form string="Support">
+										<sheet>
+										<h1>
+											<field name="name" placeholder="Nom support"/>
+										</h1>
+
+									</sheet>
+									</form>
+								</field>
+							</record>
+
+
+</odoo>

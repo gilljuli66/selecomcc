@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sites_sites,access.sites.sites,model_sites_sites,base.group_user,1,1,1,1
+access_antenne_sites,access.antenne.sites,model_antenne_sites,base.group_user,1,1,1,1
+access_batterie_sites,access.batterie.sites,model_batterie_sites,base.group_user,1,1,1,1
+access_cable_sites,access.cable.sites,model_cable_sites,base.group_user,1,1,1,1
+access_chargeur_sites,access.chargeur.sites,model_chargeur_sites,base.group_user,1,1,1,1
+access_proprietaire_sites,access.proprietaire.sites,model_proprietaire_sites,base.group_user,1,1,1,1
+access_relais_sites,access.relais.sites,model_relais_sites,base.group_user,1,1,1,1
+access_support_sites,access.support.sites,model_support_sites,base.group_user,1,1,1,1

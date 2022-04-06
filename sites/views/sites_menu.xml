@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record model="ir.actions.act_window"
+	id="action_sites_sites">
+		<field name="name">Sites</field>
+		<field name="res_model">sites.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window"
+	id="action_antenne_sites">
+		<field name="name">Antenne</field>
+		<field name="res_model">antenne.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window"
+	id="action_batterie_sites">
+		<field name="name">Batterie</field>
+		<field name="res_model">batterie.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window"
+	id="action_cable_sites">
+		<field name="name">Cable</field>
+		<field name="res_model">cable.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window"
+	id="action_chargeur_sites">
+		<field name="name">Chargeur</field>
+		<field name="res_model">chargeur.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window"
+	id="action_proprietaire_sites">
+		<field name="name">Proprietaire</field>
+		<field name="res_model">proprietaire.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window"
+	id="action_relais_sites">
+		<field name="name">Relais</field>
+		<field name="res_model">relais.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+	<record model="ir.actions.act_window"
+	id="action_support_sites">
+		<field name="name">Support</field>
+		<field name="res_model">support.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+<menuitem name="Site en Maintenance" id="sites_root_menu"/>
+
+<menuitem name="Sites" id="sites_sites_menu"
+	parent="sites_root_menu"
+	action="action_sites_sites"
+	sequence="1"/>
+<menuitem name="Configuration" id="sites_config_menu"
+	parent="sites_root_menu"
+	/>
+<menuitem name="Antenne" id="sites_antenne_menu"
+	parent="sites_config_menu"
+	action="action_antenne_sites"/>
+<menuitem name="Batterie" id="sites_batterie_menu"
+		parent="sites_config_menu"
+		action="action_batterie_sites"/>
+<menuitem name="Cable" id="sites_cable_menu"
+			parent="sites_config_menu"
+			action="action_cable_sites"/>
+<menuitem name="Chargeur" id="sites_chargeur_menu"
+				parent="sites_config_menu"
+				action="action_chargeur_sites"/>
+<menuitem name="Proprietaire" id="sites_proprietaire_menu"
+					parent="sites_config_menu"
+					action="action_proprietaire_sites"/>
+<menuitem name="Relais" id="sites_relais_menu"
+						parent="sites_config_menu"
+						action="action_relais_sites"/>
+<menuitem name="Support" id="sites_support_menu"
+							parent="sites_config_menu"
+							action="action_support_sites"/>
+</odoo>
