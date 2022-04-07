@@ -7,3 +7,9 @@ access_chargeur_sites,access.chargeur.sites,model_chargeur_sites,base.group_user
 access_proprietaire_sites,access.proprietaire.sites,model_proprietaire_sites,base.group_user,1,1,1,1
 access_relais_sites,access.relais.sites,model_relais_sites,base.group_user,1,1,1,1
 access_support_sites,access.support.sites,model_support_sites,base.group_user,1,1,1,1
+access_pc_sites,access.pc.sites,model_pc_sites,base.group_user,1,1,1,1
+access_base_sites,access.base.sites,model_base_sites,base.group_user,1,1,1,1
+access_alim_sites,access.alim.sites,model_alim_sites,base.group_user,1,1,1,1
+access_immat_sites,access.immat.sites,model_immat_sites,base.group_user,1,1,1,1
+access_centre_sites,access.centre.sites,model_centre_sites,base.group_user,1,1,1,1
+access_vehicule_sites,access.vehicule.sites,model_vehicule_sites,base.group_user,1,1,1,1

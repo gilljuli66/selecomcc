@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>>
+	<record model="ir.ui.view" id="immat_sites_view_tree">
+		<field name="name">Immatriculation tree View</field>
+		<field name="model">immat.sites</field>
+		<field name="priority" eval="16"/>
+		<field name="arch" type="xml">
+			<tree string="Immat Liste">
+	<field name="name"/>
+	<field name="centre" options="{'no_create': True,'no_create_edit': True}"/>
+	<field name="modele" options="{'no_create': True,'no_create_edit': True}"/>
+	<field name="num_sup"/>
+	<field name="code_radio"/>		
+			</tree>
+		</field>
+	</record>
+<record model="ir.ui.view" id="immat_sites_view_form">
+		<field name="name">immat.sites.view.form</field>
+		<field name="model">immat.sites</field>
+		<field name="arch" type="xml">
+			<form string="Immatriculation">
+				<sheet>
+				<h1>
+					<field name="name" placeholder="Nom immat"/>
+					
+				</h1>
+				<notebook>
+					<page string="Véhicule">
+						<group>
+						<field name="centre" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="modele" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="num_sup"/>
+						<field name="code_radio"/>		
+					</group>
+				</page>
+				</notebook>
+			</sheet>
+			</form>
+		</field>
+	</record>
+<record model="ir.ui.view" id="centre_sites_view_tree">
+		<field name="name">Centre tree View</field>
+		<field name="model">centre.sites</field>
+		<field name="priority" eval="17"/>
+		<field name="arch" type="xml">
+			<tree string="Centre Liste">
+				<field name="name"/>
+			</tree>
+		</field>
+	</record>
+</odoo>

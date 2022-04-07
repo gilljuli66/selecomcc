@@ -48,35 +48,101 @@
 		<field name="res_model">support.sites</field>
 		<field name="view_mode">tree,form</field>
 	</record>
-
+<record model="ir.actions.act_window"
+	id="action_pc_sites">
+		<field name="name">PC</field>
+		<field name="res_model">pc.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+<record model="ir.actions.act_window"
+	id="action_base_sites">
+		<field name="name">Base</field>
+		<field name="res_model">base.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+<record model="ir.actions.act_window"
+	id="action_alim_sites">
+		<field name="name">Alimentation</field>
+		<field name="res_model">alim.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+<record model="ir.actions.act_window"
+	id="action_immat_sites">
+		<field name="name">Immatriculation</field>
+		<field name="res_model">immat.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+<record model="ir.actions.act_window"
+	id="action_centre_sites">
+		<field name="name">Centre</field>
+		<field name="res_model">centre.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+<record model="ir.actions.act_window"
+	id="action_vehicule_sites">
+		<field name="name">Parc Voiture</field>
+		<field name="res_model">vehicule.sites</field>
+		<field name="view_mode">tree,form</field>
+	</record>
 <menuitem name="Site en Maintenance" id="sites_root_menu"/>
 
 <menuitem name="Sites" id="sites_sites_menu"
 	parent="sites_root_menu"
 	action="action_sites_sites"
 	sequence="1"/>
+<menuitem name="Immatriculation" id="sites_immat_menu"
+	parent="sites_root_menu"
+	action="action_immat_sites"
+	sequence="2"/>
 <menuitem name="Configuration" id="sites_config_menu"
 	parent="sites_root_menu"
-	/>
-<menuitem name="Antenne" id="sites_antenne_menu"
+	sequence="3"/>
+<menuitem name="Relais" id="sites_relaiM_menu"
 	parent="sites_config_menu"
+	/>
+<menuitem name="Base" id="sites_baseM_menu"
+	parent="sites_config_menu"
+	/>
+<menuitem name="Véhicule" id="sites_voitureM_menu"
+	parent="sites_config_menu"
+	/>
+<menuitem name="General" id="sites_generalM_menu"
+	parent="sites_config_menu"
+	/>	
+<menuitem name="Antenne" id="sites_antenne_menu"
+	parent="sites_generalM_menu"
 	action="action_antenne_sites"/>
 <menuitem name="Batterie" id="sites_batterie_menu"
-		parent="sites_config_menu"
-		action="action_batterie_sites"/>
+	parent="sites_generalM_menu"
+	action="action_batterie_sites"/>
 <menuitem name="Cable" id="sites_cable_menu"
-			parent="sites_config_menu"
-			action="action_cable_sites"/>
+	parent="sites_relaiM_menu"
+	action="action_cable_sites"/>
 <menuitem name="Chargeur" id="sites_chargeur_menu"
-				parent="sites_config_menu"
-				action="action_chargeur_sites"/>
+	parent="sites_relaiM_menu"
+	action="action_chargeur_sites"/>
 <menuitem name="Proprietaire" id="sites_proprietaire_menu"
-					parent="sites_config_menu"
-					action="action_proprietaire_sites"/>
+	parent="sites_generalM_menu"
+	action="action_proprietaire_sites"/>
 <menuitem name="Relais" id="sites_relais_menu"
-						parent="sites_config_menu"
-						action="action_relais_sites"/>
+	parent="sites_relaiM_menu"
+	action="action_relais_sites"/>
 <menuitem name="Support" id="sites_support_menu"
-							parent="sites_config_menu"
-							action="action_support_sites"/>
+	parent="sites_generalM_menu"
+	action="action_support_sites"/>
+<menuitem name="PC" id="sites_pc_menu"
+	parent="sites_baseM_menu"
+	action="action_pc_sites"/>
+<menuitem name="Base" id="sites_base_menu"
+	parent="sites_baseM_menu"
+	action="action_base_sites"/>
+<menuitem name="Alimentation" id="sites_alim_menu"
+	parent="sites_baseM_menu"
+	action="action_alim_sites"/>
+<menuitem name="Centre" id="sites_centre_menu"
+	parent="sites_voitureM_menu"
+	action="action_centre_sites"/>
+<menuitem name="Parc voiture" id="sites_vehicule_menu"
+	parent="sites_voitureM_menu"
+	action="action_vehicule_sites"/>
 </odoo>
