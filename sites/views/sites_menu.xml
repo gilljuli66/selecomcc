@@ -87,7 +87,7 @@
 <menuitem name="Site en Maintenance" id="sites_root_menu"/>
 
 <menuitem name="Sites" id="sites_sites_menu"
-		parent="sites_sitel_menu"
+		parent="sites_root_menu"
 		action="action_sites_sites"
 		/>
 <menuitem name="Immatriculation" id="sites_immat_menu"
