@@ -12,6 +12,21 @@
 				<field name="commune"/>
 				<field name="num_dept"/>
 				<field name="code_postal"/>
+			</tree>
+		</field>
+</record>
+	<record model="ir.ui.view" id="sites_sites_view_tree">
+		<field name="name">Sites tree View</field>
+		<field name="model">sites.sites</field>
+		<field name="priority" eval="16"/>
+		<field name="arch" type="xml">
+			<tree string="Sites Liste">
+				<field name="name"/>
+				<field name="type"/>
+				<field name="adresse"/>
+				<field name="commune"/>
+				<field name="num_dept"/>
+				<field name="code_postal"/>
 				<field name="long"/>
 				<field name="lat"/>
 				<field name="alt_ngf"/>
@@ -35,7 +50,7 @@
 				<field name="type_supportB" options="{'no_create': True,'no_create_edit': True}"/>
 				<field name="proprioB" options="{'no_create': True,'no_create_edit': True}"/>
 				<field name="immat" options="{'no_create': True,'no_create_edit': True}"/>
-				
+
 			</tree>
 		</field>
 	</record>
@@ -92,7 +107,7 @@
 					<page string="Véhicule">
 						<group>
 						<field name="immat" options="{'no_create': True,'no_create_edit': True}"/>
-						
+
 					</group>
 				</page>
 				</notebook>
