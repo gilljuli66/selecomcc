@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-	<record model="ir.ui.view" id="sites_sitesl_view_tree">
-		<field name="name">Sitesl tree View</field>
-		<field name="model">sitesl.sites</field>
-		<field name="priority" eval="16"/>
-		<field name="arch" type="xml">
-			<tree string="Sitesl Liste">
-				<field name="name"/>
-				<field name="type"/>
-				<field name="adresse"/>
-				<field name="commune"/>
-				<field name="num_dept"/>
-				<field name="code_postal"/>
-			</tree>
-		</field>
-</record>
-	<record model="ir.ui.view" id="sites_sites_view_tree">
+		<record model="ir.ui.view" id="sites_sites_view_tree">
 		<field name="name">Sites tree View</field>
 		<field name="model">sites.sites</field>
 		<field name="priority" eval="16"/>
