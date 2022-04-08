@@ -7,12 +7,6 @@
 		<field name="view_mode">tree,form</field>
 	</record>
 	<record model="ir.actions.act_window"
-	id="action_sitesL_sites">
-		<field name="name">SitesL</field>
-		<field name="res_model">sites.sites</field>
-		<field name="view_mode">tree,form</field>
-	</record>
-	<record model="ir.actions.act_window"
 	id="action_antenne_sites">
 		<field name="name">Antenne</field>
 		<field name="res_model">antenne.sites</field>
@@ -92,10 +86,6 @@
 	</record>
 <menuitem name="Site en Maintenance" id="sites_root_menu"/>
 
-<menuitem name="Sitesl" id="sites_sitesl_menu"
-	parent="sites_root_menu"
-	action="action_sitesl_sites"
-	sequence="1"/>
 <menuitem name="Sites" id="sites_sites_menu"
 		parent="sites_sitel_menu"
 		action="action_sites_sites"
