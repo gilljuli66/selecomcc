@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+	<record model="ir.ui.view" id="sitesG_sites_view_tree">
+		<field name="name">SitesGlobal tree View</field>
+		<field name="model">sites.sites</field>
+		<field name="priority" eval="16"/>
+		<field name="arch" type="xml">
+			<tree string="Sites Global Liste">
+				<field name="name"/>
+				<field name="type"/>
+		</tree>
+		</field>
+	</record>
+			
 	<record model="ir.ui.view" id="sites_sites_view_tree">
 		<field name="name">Sites tree View</field>
 		<field name="model">sites.sites</field>
@@ -8,22 +20,34 @@
 			<tree string="Sites Liste">
 				<field name="name"/>
 				<field name="type"/>
-				<field name="adresse"/>
+				<field name="adresse" optional="hide"/>
 				<field name="commune"/>
 				<field name="num_dept"/>
 				<field name="code_postal"/>
-				<field name="long"/>
-				<field name="lat"/>
-				<field name="alt_ngf"/>
-				<field name="type_relais" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_chargeur" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_batterie" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_cable" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_ant_40" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="haut_ant_40"/>
-				<field name="type_ant_FH" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="haut_ant_FH"/>
-				<field name="type_support" options="{'no_create': True,'no_create_edit': True}"/>
+				<field name="long" optional="hide"/>
+				<field name="lat" optional="hide"/>
+				<field name="alt_ngf" optional="hide"/>
+				<field name="type_relais" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_chargeur" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_batterie" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_cable" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="multicoup" optional="hide"/>
+				<field name="type_ant_40" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_ant_40" optional="hide"/>
+				<field name="type_ant_FH" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_ant_FH" optional="hide"/>
+				<field name="type_support" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="proprio" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_pc" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_base" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_alim" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_batterieB" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_antB_40" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_antB_40" optional="hide"/>
+				<field name="type_supportB" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="proprioB" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="immat" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				
 			</tree>
 		</field>
 	</record>
@@ -56,11 +80,31 @@
 						<field name="type_chargeur" options="{'no_create': True,'no_create_edit': True}"/>
 						<field name="type_batterie" options="{'no_create': True,'no_create_edit': True}"/>
 						<field name="type_cable" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="multicoup" />
 						<field name="type_ant_40" options="{'no_create': True,'no_create_edit': True}"/>
 						<field name="haut_ant_40"/>
 						<field name="type_ant_FH" options="{'no_create': True,'no_create_edit': True}"/>
 						<field name="haut_ant_FH"/>
 						<field name="type_support" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="proprio" options="{'no_create': True,'no_create_edit': True}"/>
+					</group>
+				</page>
+					<page string="Base">
+						<group>
+						<field name="type_pc" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="type_base" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="type_alim" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="type_batterieB" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="type_antB_40" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="haut_antB_40"/>
+						<field name="type_supportB" options="{'no_create': True,'no_create_edit': True}"/>
+						<field name="proprioB" options="{'no_create': True,'no_create_edit': True}"/>
+					</group>
+				</page>
+					<page string="Véhicule">
+						<group>
+						<field name="immat" options="{'no_create': True,'no_create_edit': True}"/>
+						
 					</group>
 				</page>
 				</notebook>
@@ -243,6 +287,4 @@
 									</form>
 								</field>
 							</record>
-
-
 </odoo>
