@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-	<record model="ir.ui.view" id="sites_sites_view_tree">
+<record model="ir.ui.view" id="sites_sites_view_tree">
 		<field name="name">Sites tree View</field>
 		<field name="model">sites.sites</field>
 		<field name="priority" eval="16"/>
@@ -8,34 +8,48 @@
 			<tree string="Sites Liste">
 				<field name="name"/>
 				<field name="type"/>
-				<field name="adresse"/>
+				<field name="adresse" optional="hide"/>
 				<field name="commune"/>
-				<field name="num_dept"/>
+				<field name="partner_name" domain="[[&quot;child_ids&quot;,&quot;ilike&quot;,&quot;DIRNO&quot;]]"/>
 				<field name="code_postal"/>
-				<field name="long"/>
-				<field name="lat"/>
-				<field name="alt_ngf"/>
-				<field name="type_relais" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_chargeur" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_batterie" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_cable" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="multicoup" />
-				<field name="type_ant_40" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="haut_ant_40"/>
-				<field name="type_ant_FH" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="haut_ant_FH"/>
-				<field name="type_support" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="proprio" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_pc" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_base" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_alim" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_batterieB" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="type_antB_40" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="haut_antB_40"/>
-				<field name="type_supportB" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="proprioB" options="{'no_create': True,'no_create_edit': True}"/>
-				<field name="immat" options="{'no_create': True,'no_create_edit': True}"/>
-
+				<field name="long" optional="hide"/>
+				<field name="lat" optional="hide"/>
+				<field name="alt_ngf" optional="hide"/>
+				<field name="type_relais" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_chargeur" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_batterie" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_cable" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="multicoup" optional="hide"/>
+				<field name="type_ant_40" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_ant_40" optional="hide"/>
+				<field name="nb_antfh"/>
+				<field name="type_ant_FH1" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_ant_FH1" optional="hide"/>
+				<field name="remarque_FH1" optional="hide"/>
+				<field name="type_ant_FH2" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_ant_FH2" optional="hide"/>
+				<field name="remarque_FH2" optional="hide"/>
+				<field name="type_ant_FH3" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_ant_FH3" optional="hide"/>
+				<field name="remarque_FH3" optional="hide"/>
+				<field name="type_ant_FH4" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_ant_FH4" optional="hide"/>
+				<field name="remarque_FH4" optional="hide"/>
+				<field name="type_ant_FH5" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_ant_FH5" optional="hide"/>
+				<field name="remarque_FH5" optional="hide"/>
+				<field name="type_support" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="proprio" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_pc" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_base" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_alim" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_batterieB" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="type_antB_40" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="haut_antB_40" optional="hide"/>
+				<field name="type_supportB" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="proprioB" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				<field name="immat" options="{'no_create': True,'no_create_edit': True}" optional="hide"/>
+				
 			</tree>
 		</field>
 	</record>
@@ -55,7 +69,7 @@
 							<field name="type"/>
 							<field name="adresse"/>
 							<field name="commune"/>
-							<field name="num_dept"/>
+							<field name="partner_name"/>
 							<field name="code_postal"/>
 							<field name="long"/>
 							<field name="lat"/>
@@ -71,8 +85,22 @@
 						<field name="multicoup" />
 						<field name="type_ant_40" options="{'no_create': True,'no_create_edit': True}"/>
 						<field name="haut_ant_40"/>
-						<field name="type_ant_FH" options="{'no_create': True,'no_create_edit': True}"/>
-						<field name="haut_ant_FH"/>
+						<field name="nb_antfh"/>
+						<field name="type_ant_FH1" options="{'no_create': True,'no_create_edit': True}" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,1]]}"/>
+						<field name="haut_ant_FH1" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,1]]}"/>
+						<field name="remarque_FH1" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,1]]}"/>
+						<field name="type_ant_FH2" options="{'no_create': True,'no_create_edit': True}" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,2]]}"/>
+						<field name="haut_ant_FH2" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,2]]}"/>
+						<field name="remarque_FH2" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,2]]}"/>
+						<field name="type_ant_FH3" options="{'no_create': True,'no_create_edit': True}" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,3]]}"/>
+						<field name="haut_ant_FH3" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,3]]}"/>
+						<field name="remarque_FH3" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,3]]}"/>
+						<field name="type_ant_FH4" options="{'no_create': True,'no_create_edit': True}" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,4]]}"/>
+						<field name="haut_ant_FH4" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,4]]}"/>
+						<field name="remarque_FH4" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,4]]}"/>
+						<field name="type_ant_FH5" options="{'no_create': True,'no_create_edit': True}" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,5]]}"/>
+						<field name="haut_ant_FH5" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,5]]}"/>
+						<field name="remarque_FH5" attrs="{&quot;invisible&quot;: [[&quot;nb_antfh&quot;,&quot;&lt;&quot;,5]]}"/>
 						<field name="type_support" options="{'no_create': True,'no_create_edit': True}"/>
 						<field name="proprio" options="{'no_create': True,'no_create_edit': True}"/>
 					</group>
@@ -92,7 +120,7 @@
 					<page string="Véhicule">
 						<group>
 						<field name="immat" options="{'no_create': True,'no_create_edit': True}"/>
-
+						
 					</group>
 				</page>
 				</notebook>

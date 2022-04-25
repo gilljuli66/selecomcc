@@ -86,10 +86,10 @@
 	</record>
 <menuitem name="Site en Maintenance" id="sites_root_menu"/>
 
-<menuitem name="Sites" id="sites_sites_menu"
-		parent="sites_root_menu"
-		action="action_sites_sites"
-		/>
+<menuitem name="Sites" id="sites_site_menu"
+	parent="sites_root_menu"
+	action="action_sites_sites"
+	sequence="1"/>
 <menuitem name="Immatriculation" id="sites_immat_menu"
 	parent="sites_root_menu"
 	action="action_immat_sites"
@@ -108,7 +108,7 @@
 	/>
 <menuitem name="General" id="sites_generalM_menu"
 	parent="sites_config_menu"
-	/>
+	/>	
 <menuitem name="Antenne" id="sites_antenne_menu"
 	parent="sites_generalM_menu"
 	action="action_antenne_sites"/>

@@ -1,4 +1,5 @@
 from odoo import models, fields
+
 class Sites(models.Model):
     _name = 'sites.sites'
 
@@ -6,7 +7,7 @@ class Sites(models.Model):
     type = fields.Char(string="Type de site")
     adresse = fields.Char(string="Adresse")
     commune = fields.Char(string="commune")
-    num_dept = fields.Integer("N° Département")
+    partner_name = fields.Many2one('res.partner',string="DIRNO CEI")
     code_postal = fields.Integer("Code Postal")
     long = fields.Float("Longitude",digits=(3,5))
     lat = fields.Float("Latitude",digits=(3,5))
@@ -18,8 +19,22 @@ class Sites(models.Model):
     multicoup = fields.Selection([('OUI','OUI'),('NON','NON'),],'Multicoupleur',default='NON')
     type_ant_40 = fields.Many2one(comodel_name='antenne.sites',string='Antenne')
     haut_ant_40 = fields.Float("Hauteur antenne 40MHz",digits=(4,3))
-    type_ant_FH = fields.Many2one(comodel_name='antenne.sites',string='Antenne')
-    haut_ant_FH = fields.Float("Hauteur antenne FH",digits=(4,3))
+    nb_antfh = fields.Integer("Nbre antenne FH")
+    type_ant_FH1 = fields.Many2one(comodel_name='antenne.sites',string='Antenne1')
+    haut_ant_FH1 = fields.Float("Hauteur antenne1 FH",digits=(4,3))
+    remarque_FH1 = fields.Text(string="Remarque FH1")
+    type_ant_FH2 = fields.Many2one(comodel_name='antenne.sites',string='Antenne2')
+    haut_ant_FH2 = fields.Float("Hauteur antenne2 FH",digits=(4,3))
+    remarque_FH2 = fields.Text(string="Remarque FH2")
+    type_ant_FH3 = fields.Many2one(comodel_name='antenne.sites',string='Antenne3')
+    haut_ant_FH3 = fields.Float("Hauteur antenne3 FH",digits=(4,3))
+    remarque_FH3 = fields.Text(string="Remarque FH3")
+    type_ant_FH4 = fields.Many2one(comodel_name='antenne.sites',string='Antenne4')
+    haut_ant_FH4 = fields.Float("Hauteur antenne4 FH",digits=(4,3))
+    remarque_FH4 = fields.Text(string="Remarque FH4")
+    type_ant_FH5 = fields.Many2one(comodel_name='antenne.sites',string='Antenne5')
+    haut_ant_FH5 = fields.Float("Hauteur antenne5 FH",digits=(4,3))
+    remarque_FH5 = fields.Text(string="Remarque FH5")
     type_support = fields.Many2one(comodel_name='support.sites',string='Support')
     proprio = fields.Many2one(comodel_name='proprietaire.sites',string='Proprietaire')
     type_pc = fields.Many2one(comodel_name='pc.sites',string='Pc Base')
@@ -31,3 +46,5 @@ class Sites(models.Model):
     type_supportB = fields.Many2one(comodel_name='support.sites',string='Support Base')
     proprioB = fields.Many2one(comodel_name='proprietaire.sites',string='Proprietaire Base')
     immat = fields.Many2one(comodel_name='immat.sites',string='Immatriculation')
+    
+     
